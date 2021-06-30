@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOCUMENTATION</title>
+		<link rel='stylesheet' href='/stylesheets/retro.css' />
+	</head>
+</html>
+<body>
+	{{#each contents}}
+		<li><a href="#{{@key}}">{{@key}}</a></li>
+	{{/each}}
+	<div>
+		{{#each contents}}
+			<h3>{{@key}}</h3>
+			<div id="{{@key}}">{{{this}}}</div>
+		{{/each}}
+	</div>
+</body>
