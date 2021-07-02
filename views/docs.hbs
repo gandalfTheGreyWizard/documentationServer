@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOCUMENTATION</title>
+		<link rel='stylesheet' href='/stylesheets/retro.css' />
+	</head>
+</html>
+<body>
+	<ul>
+	{{#each listItems}}
+		<li>
+			<a href="/docs/?name={{this}}">{{{this}}}</a>
+		</li>
+	{{/each}}
+	</ul>
+	<div>
+		{{{htmlToParse}}}
+	</div>
+</body>
+

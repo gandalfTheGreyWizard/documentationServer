@@ -19,8 +19,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// router variable creation
+const docsRouter = require('./routes/docsRouter');
+
+// routers being used 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/docs', docsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

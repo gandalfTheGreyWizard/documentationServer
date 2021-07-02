@@ -9,10 +9,10 @@ router.get('/', function(req, res, next) {
 	const files = fs.readdirSync('./docs/');
 	files.forEach(eachMarkdownFile => {
 		console.log("each file is", eachMarkdownFile);
-		const data = fs.readFileSync('./docs/' + eachMarkdownFile, 'utf-8');
-		console.log("contents of file are", data);
-		const tree = md.parse(data);
 		try {
+			const data = fs.readFileSync('./docs/' + eachMarkdownFile, 'utf-8');
+			console.log("contents of file are", data);
+			const tree = md.parse(data);
 			const refs = tree[1].references;
 			 
 			// iterate through the tree finding link references

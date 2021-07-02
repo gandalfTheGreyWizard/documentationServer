@@ -11,8 +11,11 @@
 	{{/each}}
 	<div>
 		{{#each contents}}
-			<h3>{{@key}}</h3>
-			<div id="{{@key}}">{{{this}}}</div>
+			<div id="{{@index}}">
+				<h3>{{@key}}</h3>
+				<div id="{{@key}}">{{{this}}}</div>
+			</div>
 		{{/each}}
 	</div>
 </body>
+
