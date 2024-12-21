@@ -6,15 +6,19 @@
 	</head>
 </html>
 <body>
-	<ul>
-	{{#each listItems}}
-		<li>
-			<a href="/docs/?name={{this}}">{{{this}}}</a>
-		</li>
-	{{/each}}
-	</ul>
-	<div>
+<div>
+  <div style="width: 20%; height: 100%; display: inline-block; position: fixed; top: 0px; margin: 0px; left: 0px; overflow: scroll;">
+    <ul>
+    {{#each markdownFiles}}
+      <li>
+        <a href="/docs/?name={{this}}">{{{this}}}</a>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+	<div style="width: 50%; display: inline-block; left: 25%; position: absolute;">
 		{{{htmlToParse}}}
 	</div>
+</div>
 </body>
 
