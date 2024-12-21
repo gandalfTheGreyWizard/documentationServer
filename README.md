@@ -1,5 +1,4 @@
 #### Setup
-
 1. Clone the repository
 2. Run `npm install`
 3. `ln -s [path to docs directory] docs`  **create a softlink locally for navigation from server**
