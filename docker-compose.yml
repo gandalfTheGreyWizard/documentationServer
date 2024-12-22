@@ -1,0 +1,10 @@
+services:
+  documentation_server:
+    env_file: .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT}:8080
+    volumes:
+      - ${DOCUMENTATION_PATH}:/usr/src/app/docs
