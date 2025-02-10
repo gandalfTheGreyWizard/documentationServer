@@ -8,4 +8,5 @@ services:
     ports:
       - ${PORT}:8080
     volumes:
-      - ${DOCUMENTATION_PATH}:/usr/src/app/docs
+      - ${DOCUMENTATION_DIR}:/usr/src/app/docs
+      - ${ASSETS_DIR}:/usr/src/app/public/assets
